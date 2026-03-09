@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+.env
+.venv
+venv/
+*.log
+*.sqlite3
+.ipynb_checkpoints
+*.segy
+*.sgy
+*.nc
+*.h5
+data/
+output/

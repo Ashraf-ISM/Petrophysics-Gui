@@ -1,0 +1,1281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1960</width>
+    <height>952</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QWidget {
+    background-color: #f5faff; /* Light blue background */
+    color: #003366; /* Dark blue text */
+    font-size: 13pt;
+}
+
+QLabel {
+    color: #003366; /* Dark blue */
+}
+
+QPushButton {
+    background-color: #0066cc; /* Medium blue */
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+QPushButton:hover {
+    background-color: #005bb5; /* Slightly darker blue on hover */
+}
+
+QLineEdit, QComboBox {
+    background-color: #ffffff; /* White input fields */
+    border: 1px solid #0066cc; /* Blue border */
+    padding: 5px;
+    border-radius: 3px;
+}
+
+QTabWidget::pane {
+    border: 1px solid #0066cc; /* Blue border */
+}
+
+QScrollArea {
+    border: 1px solid #0066cc; /* Blue border */
+}
+</string>
+  </property>
+  <widget class="QTabWidget" name="Form_Eva">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>1891</width>
+     <height>961</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>13</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="tabShape">
+    <enum>QTabWidget::Rounded</enum>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Fomation Evaluation</string>
+    </attribute>
+    <widget class="QTabWidget" name="Evapara">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>1871</width>
+       <height>931</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>Quality Control</string>
+      </attribute>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>20</y>
+         <width>231</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Enter Bit Size Value</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>100</y>
+         <width>281</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Enter the tolerance value </string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_20">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>130</y>
+         <width>281</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string> for borehole deviation</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="bitsizeholdedevsub">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>230</y>
+         <width>131</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Submit</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_21">
+       <property name="geometry">
+        <rect>
+         <x>700</x>
+         <y>10</y>
+         <width>391</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Outlier Detection using Isolation Forest Model</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="outlierremsellog">
+       <property name="geometry">
+        <rect>
+         <x>800</x>
+         <y>60</y>
+         <width>151</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_24">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>60</y>
+         <width>251</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Select Logs to display</string>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="bitsize">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>60</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="holedev">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>170</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Outlierremovesub">
+       <property name="geometry">
+        <rect>
+         <x>990</x>
+         <y>60</y>
+         <width>131</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Submit</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_22">
+       <property name="geometry">
+        <rect>
+         <x>1360</x>
+         <y>30</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Nan Removal&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QScrollArea" name="baddataplot">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>280</y>
+         <width>581</width>
+         <height>601</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::WinPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents_5">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>579</width>
+          <height>599</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QScrollArea" name="outlierremplot">
+       <property name="geometry">
+        <rect>
+         <x>620</x>
+         <y>100</y>
+         <width>601</width>
+         <height>751</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::WinPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents_6">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>599</width>
+          <height>749</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QScrollArea" name="nanremplot">
+       <property name="geometry">
+        <rect>
+         <x>1230</x>
+         <y>100</y>
+         <width>621</width>
+         <height>771</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::WinPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents_7">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>619</width>
+          <height>769</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>230</y>
+         <width>231</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Bad Data Display</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="nanlinear">
+       <property name="geometry">
+        <rect>
+         <x>1550</x>
+         <y>20</y>
+         <width>181</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Linear Interpolation</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="nanmean">
+       <property name="geometry">
+        <rect>
+         <x>1550</x>
+         <y>50</y>
+         <width>112</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Mean</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_3">
+      <attribute name="title">
+       <string> V Shale </string>
+      </attribute>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>231</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Minimum GR Percentile</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>130</y>
+         <width>241</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Maximum GR Percentile</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>240</y>
+         <width>191</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>V shale Type </string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="Shaletype">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>270</y>
+         <width>221</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Linear</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Vsh_Larinor_older</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Vsh_Larinor_Tertiary</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Vsh_Clavier</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QScrollArea" name="vplot">
+       <property name="geometry">
+        <rect>
+         <x>610</x>
+         <y>0</y>
+         <width>971</width>
+         <height>831</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::WinPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>969</width>
+          <height>829</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="vsub">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>360</y>
+         <width>171</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Submit</string>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="grmin">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>60</y>
+         <width>131</width>
+         <height>41</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="grmax">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>160</y>
+         <width>131</width>
+         <height>41</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_4">
+      <attribute name="title">
+       <string> Porosity</string>
+      </attribute>
+      <widget class="QTabWidget" name="fromevaporosity">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>1851</width>
+         <height>821</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="tab_7">
+        <attribute name="title">
+         <string>NPHI</string>
+        </attribute>
+        <widget class="QScrollArea" name="nphiplot">
+         <property name="geometry">
+          <rect>
+           <x>460</x>
+           <y>40</y>
+           <width>1351</width>
+           <height>701</height>
+          </rect>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_2">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>1349</width>
+            <height>699</height>
+           </rect>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="NPHIsub">
+         <property name="geometry">
+          <rect>
+           <x>80</x>
+           <y>440</y>
+           <width>161</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Plot </string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_27">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>30</y>
+           <width>111</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>NPHI LOG</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_28">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>150</y>
+           <width>181</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Matrix Correction</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_29">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>250</y>
+           <width>111</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Correction</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="NPHILOG">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>80</y>
+           <width>191</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="MATCORR">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>190</y>
+           <width>191</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <item>
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Addition</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Substraction</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QDoubleSpinBox" name="CORRVAL">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>290</y>
+           <width>151</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="decimals">
+          <number>2</number>
+         </property>
+         <property name="singleStep">
+          <double>1.000000000000000</double>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_9">
+        <attribute name="title">
+         <string>DPHI</string>
+        </attribute>
+        <widget class="QLabel" name="label_25">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>40</y>
+           <width>281</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Enter Matrix Density (gm/cc)</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_26">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>170</y>
+           <width>371</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Enter Formation Fluid Density (gm/cc)</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="rhoma">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>90</y>
+           <width>171</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="rhof">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>220</y>
+           <width>171</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="dphisub">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>320</y>
+           <width>161</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Plot </string>
+         </property>
+        </widget>
+        <widget class="QScrollArea" name="dphiplot">
+         <property name="geometry">
+          <rect>
+           <x>590</x>
+           <y>0</y>
+           <width>831</width>
+           <height>791</height>
+          </rect>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_8">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>829</width>
+            <height>789</height>
+           </rect>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_10">
+        <attribute name="title">
+         <string>TPHI and Effective Porosity</string>
+        </attribute>
+        <widget class="QScrollArea" name="tphieffecplot">
+         <property name="geometry">
+          <rect>
+           <x>550</x>
+           <y>0</y>
+           <width>641</width>
+           <height>741</height>
+          </rect>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_10">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>639</width>
+            <height>739</height>
+           </rect>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="tphieffecsub">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>250</y>
+           <width>161</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Plot </string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="tphieffecselect">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>110</y>
+           <width>201</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <item>
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>TPHI</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Effective Porosity</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QLabel" name="label_30">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>70</y>
+           <width>201</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Select Porosity Type</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_5">
+      <attribute name="title">
+       <string>Water Saturation</string>
+      </attribute>
+      <widget class="QCheckBox" name="archie">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>60</y>
+         <width>181</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Archie's Method</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>240</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Sw Parameters</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>120</y>
+         <width>221</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Do you have Rw value ?</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="yesRw">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>170</y>
+         <width>131</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Yes</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="NoRw">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>200</y>
+         <width>131</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>No</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>270</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Enter Rw value</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>340</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Enter 'a' value</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_11">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>400</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Enter 'm' value</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_12">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>460</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Enter 'n' value</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="Rwvalue">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>300</y>
+         <width>161</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="avalue">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>370</y>
+         <width>161</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="mvalue">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>430</y>
+         <width>161</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="nvalue">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>490</y>
+         <width>161</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_14">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>530</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Enter Rt value</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="Rtvalue">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>560</y>
+         <width>161</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_15">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>600</y>
+         <width>201</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Enter Porosity Value</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="Porosityvalue">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>630</y>
+         <width>171</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QScrollArea" name="watersatplot">
+       <property name="geometry">
+        <rect>
+         <x>450</x>
+         <y>0</y>
+         <width>911</width>
+         <height>821</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::WinPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents_3">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>909</width>
+          <height>819</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="porosub_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>690</y>
+         <width>171</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Submit</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_6">
+      <attribute name="title">
+       <string>Reservoir flag and NTG</string>
+      </attribute>
+      <widget class="QLabel" name="label_13">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>240</y>
+         <width>281</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Enter Cutoff Vshale Value </string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_16">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>340</y>
+         <width>251</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Enter Cutoff Sw Value</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="flagvsh">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>280</y>
+         <width>241</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="flagsw">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>380</y>
+         <width>241</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="flagsub">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>620</y>
+         <width>171</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Submit</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_17">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>50</y>
+         <width>201</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Minimum Depth (m)</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_18">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>140</y>
+         <width>201</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Maximum Depth (m)</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="flagdepthmin">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>90</y>
+         <width>241</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="flagdepthmax">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>180</y>
+         <width>241</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QScrollArea" name="watersatplot_2">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>0</y>
+         <width>1341</width>
+         <height>821</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::WinPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents_4">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1339</width>
+          <height>819</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLineEdit" name="flagporocut">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>490</y>
+         <width>241</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_19">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>440</y>
+         <width>251</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Effective Porosity Cutoff Value</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
