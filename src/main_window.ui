@@ -525,7 +525,7 @@ QSplitter::handle {
 <widget class="QWidget" name="centralwidget">
 <property name="sizePolicy"><sizepolicy hsizetype="Expanding" vsizetype="Expanding"><horstretch>0</horstretch><verstretch>0</verstretch></sizepolicy></property>
 <layout class="QHBoxLayout" name="centralHLayout">
-<property name="contentsMargins"><rect><x>6</x><y>6</y><width>6</width><height>6</height></rect></property>
+<property name="leftMargin"><number>6</number></property><property name="topMargin"><number>6</number></property><property name="rightMargin"><number>6</number></property><property name="bottomMargin"><number>6</number></property>
 <item><widget class="QSplitter" name="mainSplitter">
 <property name="orientation"><enum>Qt::Horizontal</enum></property>
 <widget class="QWidget" name="leftPanelContainer">
@@ -559,8 +559,7 @@ QSplitter::handle {
 </widget></item>
 </layout></item>
 </layout>
-</widget>
-<attribute name="title"><string>Well Browser</string></attribute>
+<attribute name="title"><string>Well Browser</string></attribute></widget>
 <widget class="QWidget" name="logSelTab">
 <layout class="QVBoxLayout" name="logSelVLayout">
 <item><widget class="QLabel" name="activeWellLbl">
@@ -621,30 +620,30 @@ QSplitter::handle {
 <item><widget class="QGroupBox" name="depthRangeGroup">
 <property name="title"><string>Depth Range</string></property>
 <layout class="QFormLayout" name="depthFormLayout">
-<item><widget class="QLabel" name="depthTopLbl">
+<item row="0" column="0"><widget class="QLabel" name="depthTopLbl">
 <property name="text"><string>Top Depth:</string></property>
 </widget></item>
-<item><widget class="QDoubleSpinBox" name="depthTopSpin">
+<item row="0" column="1"><widget class="QDoubleSpinBox" name="depthTopSpin">
 <property name="minimum"><double>0</double></property>
 <property name="maximum"><double>99999</double></property>
 <property name="value"><double>0</double></property>
 <property name="decimals"><number>1</number></property>
 <property name="toolTip"><string>Top of depth range</string></property>
 </widget></item>
-<item><widget class="QLabel" name="depthBotLbl">
+<item row="1" column="0"><widget class="QLabel" name="depthBotLbl">
 <property name="text"><string>Bottom Depth:</string></property>
 </widget></item>
-<item><widget class="QDoubleSpinBox" name="depthBotSpin">
+<item row="1" column="1"><widget class="QDoubleSpinBox" name="depthBotSpin">
 <property name="minimum"><double>0</double></property>
 <property name="maximum"><double>99999</double></property>
 <property name="value"><double>5000</double></property>
 <property name="decimals"><number>1</number></property>
 <property name="toolTip"><string>Bottom of depth range</string></property>
 </widget></item>
-<item><widget class="QLabel" name="depthStepLbl">
+<item row="2" column="0"><widget class="QLabel" name="depthStepLbl">
 <property name="text"><string>Depth Step:</string></property>
 </widget></item>
-<item><widget class="QComboBox" name="depthStepCombo">
+<item row="2" column="1"><widget class="QComboBox" name="depthStepCombo">
 <property name="toolTip"><string>Depth step interval</string></property>
 <item><property name="text"><string>0.1524 m</string></property></item>
 <item><property name="text"><string>0.1 m</string></property></item>
@@ -653,67 +652,66 @@ QSplitter::handle {
 </widget></item>
 </layout>
 </widget></item>
-<item><spacer><spacer><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>20</height></size></property></spacer></spacer></item>
+<item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>20</height></size></property></spacer></item>
 </layout>
-</widget>
-<attribute name="title"><string>Log Selection</string></attribute>
+<attribute name="title"><string>Log Selection</string></attribute></widget>
 <widget class="QWidget" name="wellInfoTab">
 <layout class="QVBoxLayout" name="wellInfoVLayout">
 <item><widget class="QGroupBox" name="wellHeaderGroup">
 <property name="title"><string>Well Header</string></property>
 <layout class="QFormLayout" name="wellInfoFormLayout">
-<item><widget class="QLabel" name="lbl_wellNameEdit">
+<item row="0" column="0"><widget class="QLabel" name="lbl_wellNameEdit">
 <property name="text"><string>Well Name:</string></property>
 </widget></item>
-<item><widget class="QLineEdit" name="wellNameEdit">
+<item row="0" column="1"><widget class="QLineEdit" name="wellNameEdit">
 <property name="toolTip"><string>Well name</string></property>
 </widget></item>
-<item><widget class="QLabel" name="lbl_fieldNameEdit">
+<item row="1" column="0"><widget class="QLabel" name="lbl_fieldNameEdit">
 <property name="text"><string>Field:</string></property>
 </widget></item>
-<item><widget class="QLineEdit" name="fieldNameEdit">
+<item row="1" column="1"><widget class="QLineEdit" name="fieldNameEdit">
 <property name="toolTip"><string>Field name</string></property>
 </widget></item>
-<item><widget class="QLabel" name="lbl_latitudeEdit">
+<item row="2" column="0"><widget class="QLabel" name="lbl_latitudeEdit">
 <property name="text"><string>Latitude:</string></property>
 </widget></item>
-<item><widget class="QLineEdit" name="latitudeEdit">
+<item row="2" column="1"><widget class="QLineEdit" name="latitudeEdit">
 <property name="toolTip"><string>Well latitude</string></property>
 </widget></item>
-<item><widget class="QLabel" name="lbl_longitudeEdit">
+<item row="3" column="0"><widget class="QLabel" name="lbl_longitudeEdit">
 <property name="text"><string>Longitude:</string></property>
 </widget></item>
-<item><widget class="QLineEdit" name="longitudeEdit">
+<item row="3" column="1"><widget class="QLineEdit" name="longitudeEdit">
 <property name="toolTip"><string>Well longitude</string></property>
 </widget></item>
-<item><widget class="QLabel" name="lbl_kbElevEdit">
+<item row="4" column="0"><widget class="QLabel" name="lbl_kbElevEdit">
 <property name="text"><string>KB Elevation (m):</string></property>
 </widget></item>
-<item><widget class="QLineEdit" name="kbElevEdit">
+<item row="4" column="1"><widget class="QLineEdit" name="kbElevEdit">
 <property name="toolTip"><string>Kelly bushing elevation</string></property>
 </widget></item>
-<item><widget class="QLabel" name="lbl_tdEdit">
+<item row="5" column="0"><widget class="QLabel" name="lbl_tdEdit">
 <property name="text"><string>TD (m):</string></property>
 </widget></item>
-<item><widget class="QLineEdit" name="tdEdit">
+<item row="5" column="1"><widget class="QLineEdit" name="tdEdit">
 <property name="toolTip"><string>Total depth</string></property>
 </widget></item>
-<item><widget class="QLabel" name="lbl_waterDepthEdit">
+<item row="6" column="0"><widget class="QLabel" name="lbl_waterDepthEdit">
 <property name="text"><string>Water Depth (m):</string></property>
 </widget></item>
-<item><widget class="QLineEdit" name="waterDepthEdit">
+<item row="6" column="1"><widget class="QLineEdit" name="waterDepthEdit">
 <property name="toolTip"><string>Water depth</string></property>
 </widget></item>
-<item><widget class="QLabel" name="lbl_companyEdit">
+<item row="7" column="0"><widget class="QLabel" name="lbl_companyEdit">
 <property name="text"><string>Company:</string></property>
 </widget></item>
-<item><widget class="QLineEdit" name="companyEdit">
+<item row="7" column="1"><widget class="QLineEdit" name="companyEdit">
 <property name="toolTip"><string>Operating company</string></property>
 </widget></item>
-<item><widget class="QLabel" name="lbl_spudDateEdit">
+<item row="8" column="0"><widget class="QLabel" name="lbl_spudDateEdit">
 <property name="text"><string>Spud Date:</string></property>
 </widget></item>
-<item><widget class="QLineEdit" name="spudDateEdit">
+<item row="8" column="1"><widget class="QLineEdit" name="spudDateEdit">
 <property name="toolTip"><string>Spud date</string></property>
 </widget></item>
 </layout>
@@ -743,8 +741,7 @@ QSplitter::handle {
 </layout>
 </widget></item>
 </layout>
-</widget>
-<attribute name="title"><string>Well Info</string></attribute>
+<attribute name="title"><string>Well Info</string></attribute></widget>
 </widget></item>
 </layout>
 </widget>
@@ -791,7 +788,7 @@ QSplitter::handle {
 <property name="checked"><bool>true</bool></property>
 <property name="toolTip"><string>Show formation tops</string></property>
 </widget></item>
-<item><spacer><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></spacer></item>
+<item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
 <item><widget class="QPushButton" name="plotLogsBtn">
 <property name="text"><string>Plot</string></property>
 <property name="toolTip"><string>Plot well logs</string></property>
@@ -808,8 +805,7 @@ QSplitter::handle {
 </widget>
 </widget></item>
 </layout>
-</widget>
-<attribute name="title"><string>Well Log Viewer</string></attribute>
+<attribute name="title"><string>Well Log Viewer</string></attribute></widget>
 <widget class="QWidget" name="crossPlotTab">
 <layout class="QVBoxLayout" name="crossPlotVLayout">
 <item><layout class="QHBoxLayout" name="crossPlotCtrlLayout">
@@ -848,7 +844,7 @@ QSplitter::handle {
 <property name="text"><string>Log Scale</string></property>
 <property name="toolTip"><string>Use log scale</string></property>
 </widget></item>
-<item><spacer><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></spacer></item>
+<item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
 <item><widget class="QPushButton" name="crossPlotBtn">
 <property name="text"><string>Plot</string></property>
 <property name="toolTip"><string>Generate cross plot</string></property>
@@ -861,8 +857,7 @@ QSplitter::handle {
 </widget>
 </widget></item>
 </layout>
-</widget>
-<attribute name="title"><string>Cross Plot</string></attribute>
+<attribute name="title"><string>Cross Plot</string></attribute></widget>
 <widget class="QWidget" name="histogramTab">
 <layout class="QVBoxLayout" name="histVLayout">
 <item><layout class="QHBoxLayout" name="histCtrlLayout">
@@ -896,7 +891,7 @@ QSplitter::handle {
 <property name="text"><string>Normal Fit</string></property>
 <property name="toolTip"><string>Overlay normal distribution fit</string></property>
 </widget></item>
-<item><spacer><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></spacer></item>
+<item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
 <item><widget class="QPushButton" name="histPlotBtn">
 <property name="text"><string>Plot</string></property>
 <property name="toolTip"><string>Generate histogram</string></property>
@@ -909,8 +904,7 @@ QSplitter::handle {
 </widget>
 </widget></item>
 </layout>
-</widget>
-<attribute name="title"><string>Histogram</string></attribute>
+<attribute name="title"><string>Histogram</string></attribute></widget>
 <widget class="QWidget" name="depthStatsTab">
 <layout class="QVBoxLayout" name="statsVLayout">
 <item><layout class="QHBoxLayout" name="statsCtrlLayout">
@@ -924,7 +918,7 @@ QSplitter::handle {
 <property name="text"><string>Net Pay Only</string></property>
 <property name="toolTip"><string>Calculate statistics on net pay intervals only</string></property>
 </widget></item>
-<item><spacer><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></spacer></item>
+<item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
 <item><widget class="QPushButton" name="statsCalcBtn">
 <property name="text"><string>Calculate</string></property>
 <property name="toolTip"><string>Calculate depth statistics</string></property>
@@ -948,8 +942,7 @@ QSplitter::handle {
 <column><property name="text"><string>P90</string></property></column>
 </widget></item>
 </layout>
-</widget>
-<attribute name="title"><string>Depth Statistics</string></attribute>
+<attribute name="title"><string>Depth Statistics</string></attribute></widget>
 <widget class="QWidget" name="multiWellTab">
 <layout class="QVBoxLayout" name="mwVLayout">
 <item><layout class="QHBoxLayout" name="mwCtrlLayout">
@@ -969,7 +962,7 @@ QSplitter::handle {
 <item><property name="text"><string>Formation Top</string></property></item>
 <item><property name="text"><string>Sea Level</string></property></item>
 </widget></item>
-<item><spacer><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></spacer></item>
+<item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
 <item><widget class="QPushButton" name="mwCompareBtn">
 <property name="text"><string>Compare</string></property>
 <property name="toolTip"><string>Generate multi-well comparison plot</string></property>
@@ -982,8 +975,7 @@ QSplitter::handle {
 </widget>
 </widget></item>
 </layout>
-</widget>
-<attribute name="title"><string>Multi-Well</string></attribute>
+<attribute name="title"><string>Multi-Well</string></attribute></widget>
 <widget class="QWidget" name="dataImportTab">
 <layout class="QVBoxLayout" name="importVLayout">
 <item><widget class="QGroupBox" name="lasImportGroup">
@@ -1072,8 +1064,7 @@ QSplitter::handle {
 <property name="placeholderText"><string>Import log will appear here...</string></property>
 </widget></item>
 </layout>
-</widget>
-<attribute name="title"><string>Data Import</string></attribute>
+<attribute name="title"><string>Data Import</string></attribute></widget>
 </widget>
 <widget class="QWidget" name="rightPanelContainer">
 <property name="minimumSize"><size><width>280</width><height>0</height></size></property>
@@ -1087,10 +1078,10 @@ QSplitter::handle {
 <item><widget class="QGroupBox" name="vshGroup">
 <property name="title"><string>Vsh Calculation</string></property>
 <layout class="QFormLayout" name="vshFormLayout">
-<item><widget class="QLabel" name="grMethodLbl">
+<item row="0" column="0"><widget class="QLabel" name="grMethodLbl">
 <property name="text"><string>Method:</string></property>
 </widget></item>
-<item><widget class="QComboBox" name="vshMethodCombo">
+<item row="0" column="1"><widget class="QComboBox" name="vshMethodCombo">
 <property name="toolTip"><string>VSH calculation method</string></property>
 <item><property name="text"><string>Linear GR</string></property></item>
 <item><property name="text"><string>Larionov (Older Rocks)</string></property></item>
@@ -1098,27 +1089,27 @@ QSplitter::handle {
 <item><property name="text"><string>Clavier</string></property></item>
 <item><property name="text"><string>Steiber</string></property></item>
 </widget></item>
-<item><widget class="QLabel" name="grMinLbl">
+<item row="1" column="0"><widget class="QLabel" name="grMinLbl">
 <property name="text"><string>GR Min:</string></property>
 </widget></item>
-<item><widget class="QDoubleSpinBox" name="grMinSpin">
+<item row="1" column="1"><widget class="QDoubleSpinBox" name="grMinSpin">
 <property name="minimum"><double>0</double></property>
 <property name="maximum"><double>300</double></property>
 <property name="value"><double>20</double></property>
 <property name="decimals"><number>1</number></property>
 <property name="toolTip"><string>GR min (clean sand value)</string></property>
 </widget></item>
-<item><widget class="QLabel" name="grMaxLbl">
+<item row="2" column="0"><widget class="QLabel" name="grMaxLbl">
 <property name="text"><string>GR Max:</string></property>
 </widget></item>
-<item><widget class="QDoubleSpinBox" name="grMaxSpin">
+<item row="2" column="1"><widget class="QDoubleSpinBox" name="grMaxSpin">
 <property name="minimum"><double>0</double></property>
 <property name="maximum"><double>300</double></property>
 <property name="value"><double>150</double></property>
 <property name="decimals"><number>1</number></property>
 <property name="toolTip"><string>GR max (shale value)</string></property>
 </widget></item>
-<item><widget class="QPushButton" name="vshCalcBtn">
+<item row="3" column="0"><widget class="QPushButton" name="vshCalcBtn">
 <property name="text"><string>Calculate VSH</string></property>
 <property name="toolTip"><string>Calculate shale volume</string></property>
 </widget></item>
@@ -1127,37 +1118,37 @@ QSplitter::handle {
 <item><widget class="QGroupBox" name="porosityGroup">
 <property name="title"><string>Porosity Calculation</string></property>
 <layout class="QFormLayout" name="porFormLayout">
-<item><widget class="QLabel" name="porMethodLbl">
+<item row="0" column="0"><widget class="QLabel" name="porMethodLbl">
 <property name="text"><string>Method:</string></property>
 </widget></item>
-<item><widget class="QComboBox" name="porMethodCombo">
+<item row="0" column="1"><widget class="QComboBox" name="porMethodCombo">
 <property name="toolTip"><string>Porosity calculation method</string></property>
 <item><property name="text"><string>Density</string></property></item>
 <item><property name="text"><string>Neutron</string></property></item>
 <item><property name="text"><string>Neutron-Density</string></property></item>
 <item><property name="text"><string>Sonic</string></property></item>
 </widget></item>
-<item><widget class="QLabel" name="matDensLbl">
+<item row="1" column="0"><widget class="QLabel" name="matDensLbl">
 <property name="text"><string>Matrix Density:</string></property>
 </widget></item>
-<item><widget class="QDoubleSpinBox" name="matrixDensSpin">
+<item row="1" column="1"><widget class="QDoubleSpinBox" name="matrixDensSpin">
 <property name="minimum"><double>2.0</double></property>
 <property name="maximum"><double>3.0</double></property>
 <property name="value"><double>2.65</double></property>
 <property name="decimals"><number>3</number></property>
 <property name="toolTip"><string>Matrix density (g/cc)</string></property>
 </widget></item>
-<item><widget class="QLabel" name="fluidDensLbl">
+<item row="2" column="0"><widget class="QLabel" name="fluidDensLbl">
 <property name="text"><string>Fluid Density:</string></property>
 </widget></item>
-<item><widget class="QDoubleSpinBox" name="fluidDensSpin">
+<item row="2" column="1"><widget class="QDoubleSpinBox" name="fluidDensSpin">
 <property name="minimum"><double>0.5</double></property>
 <property name="maximum"><double>1.2</double></property>
 <property name="value"><double>1.0</double></property>
 <property name="decimals"><number>3</number></property>
 <property name="toolTip"><string>Fluid density (g/cc)</string></property>
 </widget></item>
-<item><widget class="QPushButton" name="porCalcBtn">
+<item row="3" column="0"><widget class="QPushButton" name="porCalcBtn">
 <property name="text"><string>Calculate Porosity</string></property>
 <property name="toolTip"><string>Calculate porosity</string></property>
 </widget></item>
@@ -1166,85 +1157,84 @@ QSplitter::handle {
 <item><widget class="QGroupBox" name="saturationGroup">
 <property name="title"><string>Saturation (Archie)</string></property>
 <layout class="QFormLayout" name="satFormLayout">
-<item><widget class="QLabel" name="archie_a_lbl">
+<item row="0" column="0"><widget class="QLabel" name="archie_a_lbl">
 <property name="text"><string>a (tortuosity):</string></property>
 </widget></item>
-<item><widget class="QDoubleSpinBox" name="archieSpin_a">
+<item row="0" column="1"><widget class="QDoubleSpinBox" name="archieSpin_a">
 <property name="minimum"><double>0.1</double></property>
 <property name="maximum"><double>10.0</double></property>
 <property name="value"><double>1.0</double></property>
 <property name="decimals"><number>3</number></property>
 <property name="toolTip"><string>Archie tortuosity factor (a)</string></property>
 </widget></item>
-<item><widget class="QLabel" name="archie_m_lbl">
+<item row="1" column="0"><widget class="QLabel" name="archie_m_lbl">
 <property name="text"><string>m (cementation):</string></property>
 </widget></item>
-<item><widget class="QDoubleSpinBox" name="archieSpin_m">
+<item row="1" column="1"><widget class="QDoubleSpinBox" name="archieSpin_m">
 <property name="minimum"><double>1.0</double></property>
 <property name="maximum"><double>4.0</double></property>
 <property name="value"><double>2.0</double></property>
 <property name="decimals"><number>3</number></property>
 <property name="toolTip"><string>Archie cementation exponent (m)</string></property>
 </widget></item>
-<item><widget class="QLabel" name="archie_n_lbl">
+<item row="2" column="0"><widget class="QLabel" name="archie_n_lbl">
 <property name="text"><string>n (saturation):</string></property>
 </widget></item>
-<item><widget class="QDoubleSpinBox" name="archieSpin_n">
+<item row="2" column="1"><widget class="QDoubleSpinBox" name="archieSpin_n">
 <property name="minimum"><double>1.0</double></property>
 <property name="maximum"><double>4.0</double></property>
 <property name="value"><double>2.0</double></property>
 <property name="decimals"><number>3</number></property>
 <property name="toolTip"><string>Archie saturation exponent (n)</string></property>
 </widget></item>
-<item><widget class="QLabel" name="archie_rw_lbl">
+<item row="3" column="0"><widget class="QLabel" name="archie_rw_lbl">
 <property name="text"><string>Rw (ohm.m):</string></property>
 </widget></item>
-<item><widget class="QDoubleSpinBox" name="archieSpinRw">
+<item row="3" column="1"><widget class="QDoubleSpinBox" name="archieSpinRw">
 <property name="minimum"><double>0.001</double></property>
 <property name="maximum"><double>10.0</double></property>
 <property name="value"><double>0.05</double></property>
 <property name="decimals"><number>4</number></property>
 <property name="toolTip"><string>Formation water resistivity Rw (ohm.m)</string></property>
 </widget></item>
-<item><widget class="QPushButton" name="satCalcBtn">
+<item row="4" column="0"><widget class="QPushButton" name="satCalcBtn">
 <property name="text"><string>Calculate SW</string></property>
 <property name="toolTip"><string>Calculate water saturation (Archie)</string></property>
 </widget></item>
 </layout>
 </widget></item>
-<item><spacer><spacer><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>20</height></size></property></spacer></spacer></item>
+<item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>20</height></size></property></spacer></item>
 </layout>
-</widget>
-<attribute name="title"><string>Petrophysics</string></attribute>
+<attribute name="title"><string>Petrophysics</string></attribute></widget>
 <widget class="QWidget" name="rockPropsTab">
 <layout class="QVBoxLayout" name="rockPropsVLayout">
 <item><widget class="QGroupBox" name="acousticImpGroup">
 <property name="title"><string>Acoustic Impedance</string></property>
 <layout class="QFormLayout" name="aiFormLayout">
-<item><widget class="QLabel" name="aiVpLbl">
+<item row="0" column="0"><widget class="QLabel" name="aiVpLbl">
 <property name="text"><string>Vp (m/s):</string></property>
 </widget></item>
-<item><widget class="QDoubleSpinBox" name="aiVpSpin">
+<item row="0" column="1"><widget class="QDoubleSpinBox" name="aiVpSpin">
 <property name="minimum"><double>1000</double></property>
 <property name="maximum"><double>8000</double></property>
 <property name="value"><double>3500</double></property>
 <property name="decimals"><number>1</number></property>
 <property name="toolTip"><string>P-wave velocity (m/s)</string></property>
 </widget></item>
-<item><widget class="QLabel" name="aiVsLbl">
+<item row="1" column="0"><widget class="QLabel" name="aiVsLbl">
 <property name="text"><string>Vs (m/s):</string></property>
 </widget></item>
-<item><widget class="QDoubleSpinBox" name="aiVsSpin">
+<item row="1" column="1"><widget class="QDoubleSpinBox" name="aiVsSpin">
 <property name="minimum"><double>500</double></property>
 <property name="maximum"><double>5000</double></property>
 <property name="value"><double>2000</double></property>
 <property name="decimals"><number>1</number></property>
 <property name="toolTip"><string>S-wave velocity (m/s)</string></property>
 </widget></item>
-<item><widget class="QLabel" name="aiRhoLbl">
+<item row="2" column="0"><widget class="QLabel" name="aiRhoLbl">
 <property name="text"><string>Rho (g/cc):</string></property>
 </widget></item>
-<item><widget class="QDoubleSpinBox" name="aiRhoSpin">
+<item row="2" column="1"><widget class="QDoubleSpinBox" name="aiRhoSpin">
 <property name="minimum"><double>1.5</double></property>
 <property name="maximum"><double>4.0</double></property>
 <property name="value"><double>2.5</double></property>
@@ -1256,87 +1246,86 @@ QSplitter::handle {
 <item><widget class="QGroupBox" name="elasticModuliGroup">
 <property name="title"><string>Elastic Moduli</string></property>
 <layout class="QFormLayout" name="emFormLayout">
-<item><widget class="QLabel" name="emVpLbl">
+<item row="0" column="0"><widget class="QLabel" name="emVpLbl">
 <property name="text"><string>Vp (m/s):</string></property>
 </widget></item>
-<item><widget class="QDoubleSpinBox" name="emVpSpin">
+<item row="0" column="1"><widget class="QDoubleSpinBox" name="emVpSpin">
 <property name="minimum"><double>1000</double></property>
 <property name="maximum"><double>8000</double></property>
 <property name="value"><double>3500</double></property>
 <property name="decimals"><number>1</number></property>
 <property name="toolTip"><string>P-wave velocity for moduli calculation (m/s)</string></property>
 </widget></item>
-<item><widget class="QLabel" name="emVsLbl">
+<item row="1" column="0"><widget class="QLabel" name="emVsLbl">
 <property name="text"><string>Vs (m/s):</string></property>
 </widget></item>
-<item><widget class="QDoubleSpinBox" name="emVsSpin">
+<item row="1" column="1"><widget class="QDoubleSpinBox" name="emVsSpin">
 <property name="minimum"><double>500</double></property>
 <property name="maximum"><double>5000</double></property>
 <property name="value"><double>2000</double></property>
 <property name="decimals"><number>1</number></property>
 <property name="toolTip"><string>S-wave velocity for moduli calculation (m/s)</string></property>
 </widget></item>
-<item><widget class="QPushButton" name="emCalcBtn">
+<item row="2" column="0"><widget class="QPushButton" name="emCalcBtn">
 <property name="text"><string>Calculate Moduli</string></property>
 <property name="toolTip"><string>Calculate elastic moduli</string></property>
 </widget></item>
-<item><widget class="QLabel" name="vpVsRatioLbl">
+<item row="2" column="1"><widget class="QLabel" name="vpVsRatioLbl">
 <property name="text"><string>Vp/Vs: -</string></property>
 </widget></item>
-<item><widget class="QLabel" name="poissonRatioLbl">
+<item row="3" column="0"><widget class="QLabel" name="poissonRatioLbl">
 <property name="text"><string>Poisson Ratio: -</string></property>
 </widget></item>
 </layout>
 </widget></item>
-<item><spacer><spacer><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>20</height></size></property></spacer></spacer></item>
+<item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>20</height></size></property></spacer></item>
 </layout>
-</widget>
-<attribute name="title"><string>Rock Props</string></attribute>
+<attribute name="title"><string>Rock Props</string></attribute></widget>
 <widget class="QWidget" name="lithologyTab">
 <layout class="QVBoxLayout" name="lithoVLayout">
 <item><widget class="QGroupBox" name="lithoCutoffGroup">
 <property name="title"><string>Classification Parameters</string></property>
 <layout class="QFormLayout" name="lithoFormLayout">
-<item><widget class="QLabel" name="lithoMethodLbl">
+<item row="0" column="0"><widget class="QLabel" name="lithoMethodLbl">
 <property name="text"><string>Method:</string></property>
 </widget></item>
-<item><widget class="QComboBox" name="lithoMethodCombo">
+<item row="0" column="1"><widget class="QComboBox" name="lithoMethodCombo">
 <property name="toolTip"><string>Lithology classification method</string></property>
 <item><property name="text"><string>Manual Cutoffs</string></property></item>
 <item><property name="text"><string>Machine Learning</string></property></item>
 <item><property name="text"><string>Probabilistic</string></property></item>
 </widget></item>
-<item><widget class="QLabel" name="lithoVshCutLbl">
+<item row="1" column="0"><widget class="QLabel" name="lithoVshCutLbl">
 <property name="text"><string>Vsh Cutoff:</string></property>
 </widget></item>
-<item><widget class="QDoubleSpinBox" name="lithoVshCutSpin">
+<item row="1" column="1"><widget class="QDoubleSpinBox" name="lithoVshCutSpin">
 <property name="minimum"><double>0.0</double></property>
 <property name="maximum"><double>1.0</double></property>
 <property name="value"><double>0.4</double></property>
 <property name="decimals"><number>2</number></property>
 <property name="toolTip"><string>Vsh cutoff for shale classification</string></property>
 </widget></item>
-<item><widget class="QLabel" name="lithoPhieCutLbl">
+<item row="2" column="0"><widget class="QLabel" name="lithoPhieCutLbl">
 <property name="text"><string>PHIE Cutoff:</string></property>
 </widget></item>
-<item><widget class="QDoubleSpinBox" name="lithoPhieCutSpin">
+<item row="2" column="1"><widget class="QDoubleSpinBox" name="lithoPhieCutSpin">
 <property name="minimum"><double>0.0</double></property>
 <property name="maximum"><double>0.5</double></property>
 <property name="value"><double>0.05</double></property>
 <property name="decimals"><number>3</number></property>
 <property name="toolTip"><string>PHIE cutoff for reservoir classification</string></property>
 </widget></item>
-<item><widget class="QLabel" name="lithoSwCutLbl">
+<item row="3" column="0"><widget class="QLabel" name="lithoSwCutLbl">
 <property name="text"><string>SW Cutoff:</string></property>
 </widget></item>
-<item><widget class="QDoubleSpinBox" name="lithoSwCutSpin">
+<item row="3" column="1"><widget class="QDoubleSpinBox" name="lithoSwCutSpin">
 <property name="minimum"><double>0.0</double></property>
 <property name="maximum"><double>1.0</double></property>
 <property name="value"><double>0.7</double></property>
 <property name="decimals"><number>2</number></property>
 <property name="toolTip"><string>SW cutoff for net pay classification</string></property>
 </widget></item>
-<item><widget class="QPushButton" name="lithoClassifyBtn">
+<item row="4" column="0"><widget class="QPushButton" name="lithoClassifyBtn">
 <property name="text"><string>Classify</string></property>
 <property name="toolTip"><string>Run lithology classification</string></property>
 </widget></item>
@@ -1350,10 +1339,9 @@ QSplitter::handle {
 <column><property name="text"><string>Depth From (m)</string></property></column>
 <column><property name="text"><string>Depth To (m)</string></property></column>
 </widget></item>
-<item><spacer><spacer><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>20</height></size></property></spacer></spacer></item>
+<item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>20</height></size></property></spacer></item>
 </layout>
-</widget>
-<attribute name="title"><string>Lithology</string></attribute>
+<attribute name="title"><string>Lithology</string></attribute></widget>
 <widget class="QWidget" name="qcTab">
 <layout class="QVBoxLayout" name="qcVLayout">
 <item><widget class="QPushButton" name="runQcBtn">
@@ -1375,50 +1363,49 @@ QSplitter::handle {
 <property name="placeholderText"><string>QC results will appear here...</string></property>
 </widget></item>
 </layout>
-</widget>
-<attribute name="title"><string>QC</string></attribute>
+<attribute name="title"><string>QC</string></attribute></widget>
 <widget class="QWidget" name="netPayTab">
 <layout class="QVBoxLayout" name="netPayVLayout">
 <item><widget class="QGroupBox" name="netPayGroup">
 <property name="title"><string>Net Pay Parameters</string></property>
 <layout class="QFormLayout" name="npFormLayout">
-<item><widget class="QLabel" name="npVshCutLbl">
+<item row="0" column="0"><widget class="QLabel" name="npVshCutLbl">
 <property name="text"><string>Vsh Cutoff:</string></property>
 </widget></item>
-<item><widget class="QDoubleSpinBox" name="npVshCutSpin">
+<item row="0" column="1"><widget class="QDoubleSpinBox" name="npVshCutSpin">
 <property name="minimum"><double>0.0</double></property>
 <property name="maximum"><double>1.0</double></property>
 <property name="value"><double>0.4</double></property>
 <property name="decimals"><number>2</number></property>
 <property name="toolTip"><string>Vsh cutoff for net pay</string></property>
 </widget></item>
-<item><widget class="QLabel" name="npPhieCutLbl">
+<item row="1" column="0"><widget class="QLabel" name="npPhieCutLbl">
 <property name="text"><string>PHIE Cutoff:</string></property>
 </widget></item>
-<item><widget class="QDoubleSpinBox" name="npPhieCutSpin">
+<item row="1" column="1"><widget class="QDoubleSpinBox" name="npPhieCutSpin">
 <property name="minimum"><double>0.0</double></property>
 <property name="maximum"><double>0.5</double></property>
 <property name="value"><double>0.08</double></property>
 <property name="decimals"><number>3</number></property>
 <property name="toolTip"><string>PHIE cutoff for net pay</string></property>
 </widget></item>
-<item><widget class="QLabel" name="npSwCutLbl">
+<item row="2" column="0"><widget class="QLabel" name="npSwCutLbl">
 <property name="text"><string>SW Cutoff:</string></property>
 </widget></item>
-<item><widget class="QDoubleSpinBox" name="npSwCutSpin">
+<item row="2" column="1"><widget class="QDoubleSpinBox" name="npSwCutSpin">
 <property name="minimum"><double>0.0</double></property>
 <property name="maximum"><double>1.0</double></property>
 <property name="value"><double>0.65</double></property>
 <property name="decimals"><number>2</number></property>
 <property name="toolTip"><string>SW cutoff for net pay</string></property>
 </widget></item>
-<item><widget class="QLabel" name="npZoneLbl">
+<item row="3" column="0"><widget class="QLabel" name="npZoneLbl">
 <property name="text"><string>Zone:</string></property>
 </widget></item>
-<item><widget class="QComboBox" name="npZoneCombo">
+<item row="3" column="1"><widget class="QComboBox" name="npZoneCombo">
 <property name="toolTip"><string>Select zone for net pay calculation</string></property>
 </widget></item>
-<item><widget class="QPushButton" name="npCalcBtn">
+<item row="4" column="0"><widget class="QPushButton" name="npCalcBtn">
 <property name="text"><string>Calculate Net Pay</string></property>
 <property name="toolTip"><string>Calculate net pay</string></property>
 </widget></item>
@@ -1433,10 +1420,9 @@ QSplitter::handle {
 <column><property name="text"><string>Gross (m)</string></property></column>
 <column><property name="text"><string>NTG</string></property></column>
 </widget></item>
-<item><spacer><spacer><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>20</height></size></property></spacer></spacer></item>
+<item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>20</height></size></property></spacer></item>
 </layout>
-</widget>
-<attribute name="title"><string>Net Pay</string></attribute>
+<attribute name="title"><string>Net Pay</string></attribute></widget>
 </widget></item>
 </layout>
 </widget>
@@ -1445,170 +1431,170 @@ QSplitter::handle {
 </widget>
 <widget class="QMenuBar" name="menuBar">
 <property name="geometry"><rect><x>0</x><y>0</y><width>1600</width><height>26</height></rect></property>
-<addaction name="menuFile"/>
-<addaction name="menuWell"/>
-<addaction name="menuImportExport"/>
-<addaction name="menuView"/>
-<addaction name="menuCalculation"/>
-<addaction name="menuInterpretation"/>
-<addaction name="menuAdvInterp"/>
-<addaction name="menuImageAnalysis"/>
-<addaction name="menuGeomechanics"/>
-<addaction name="menuMultiWell"/>
-<addaction name="menuTools"/>
-<addaction name="menuApps"/>
+<addaction name="menuFile" />
+<addaction name="menuWell" />
+<addaction name="menuImportExport" />
+<addaction name="menuView" />
+<addaction name="menuCalculation" />
+<addaction name="menuInterpretation" />
+<addaction name="menuAdvInterp" />
+<addaction name="menuImageAnalysis" />
+<addaction name="menuGeomechanics" />
+<addaction name="menuMultiWell" />
+<addaction name="menuTools" />
+<addaction name="menuApps" />
 <widget class="QMenu" name="menuFile">
 <property name="title"><string>File</string></property>
-<addaction name="actionNewProject"/>
-<addaction name="actionOpenProject"/>
-<addaction name="separator"/>
-<addaction name="actionSaveProject"/>
-<addaction name="actionSaveProjectAs"/>
-<addaction name="separator"/>
-<addaction name="actionCloseProject"/>
-<addaction name="actionRecentProjects"/>
-<addaction name="separator"/>
-<addaction name="actionExportPDF"/>
-<addaction name="actionExportImage"/>
-<addaction name="actionExportCSV"/>
-<addaction name="actionPrint"/>
-<addaction name="separator"/>
-<addaction name="actionExit"/>
+<addaction name="actionNewProject" />
+<addaction name="actionOpenProject" />
+<addaction name="separator" />
+<addaction name="actionSaveProject" />
+<addaction name="actionSaveProjectAs" />
+<addaction name="separator" />
+<addaction name="actionCloseProject" />
+<addaction name="actionRecentProjects" />
+<addaction name="separator" />
+<addaction name="actionExportPDF" />
+<addaction name="actionExportImage" />
+<addaction name="actionExportCSV" />
+<addaction name="actionPrint" />
+<addaction name="separator" />
+<addaction name="actionExit" />
 </widget>
 <widget class="QMenu" name="menuWell">
 <property name="title"><string>Well</string></property>
-<addaction name="actionAddWell"/>
-<addaction name="actionRemoveWell"/>
-<addaction name="actionWellProperties"/>
-<addaction name="separator"/>
-<addaction name="actionLoadLAS"/>
-<addaction name="actionLoadDLIS"/>
-<addaction name="separator"/>
-<addaction name="actionWellCorrelation"/>
-<addaction name="actionFormationTops"/>
+<addaction name="actionAddWell" />
+<addaction name="actionRemoveWell" />
+<addaction name="actionWellProperties" />
+<addaction name="separator" />
+<addaction name="actionLoadLAS" />
+<addaction name="actionLoadDLIS" />
+<addaction name="separator" />
+<addaction name="actionWellCorrelation" />
+<addaction name="actionFormationTops" />
 </widget>
 <widget class="QMenu" name="menuImportExport">
 <property name="title"><string>Import/Export</string></property>
-<addaction name="actionImportLAS"/>
-<addaction name="actionImportCSV"/>
-<addaction name="actionImportExcel"/>
-<addaction name="actionImportDLIS"/>
-<addaction name="actionImportLIS"/>
-<addaction name="separator"/>
-<addaction name="actionExportLAS"/>
-<addaction name="actionExportCSV"/>
-<addaction name="actionExportExcel"/>
-<addaction name="separator"/>
-<addaction name="actionBatchImport"/>
+<addaction name="actionImportLAS" />
+<addaction name="actionImportCSV" />
+<addaction name="actionImportExcel" />
+<addaction name="actionImportDLIS" />
+<addaction name="actionImportLIS" />
+<addaction name="separator" />
+<addaction name="actionExportLAS" />
+<addaction name="actionExportCSV" />
+<addaction name="actionExportExcel" />
+<addaction name="separator" />
+<addaction name="actionBatchImport" />
 </widget>
 <widget class="QMenu" name="menuView">
 <property name="title"><string>View</string></property>
-<addaction name="actionViewLogPlot"/>
-<addaction name="actionViewCrossPlot"/>
-<addaction name="actionViewHistogram"/>
-<addaction name="actionViewStats"/>
-<addaction name="actionViewMultiWell"/>
-<addaction name="actionViewDataImport"/>
-<addaction name="separator"/>
-<addaction name="actionToggleLeftPanel"/>
-<addaction name="actionToggleRightPanel"/>
-<addaction name="separator"/>
-<addaction name="actionFullScreen"/>
-<addaction name="actionResetLayout"/>
+<addaction name="actionViewLogPlot" />
+<addaction name="actionViewCrossPlot" />
+<addaction name="actionViewHistogram" />
+<addaction name="actionViewStats" />
+<addaction name="actionViewMultiWell" />
+<addaction name="actionViewDataImport" />
+<addaction name="separator" />
+<addaction name="actionToggleLeftPanel" />
+<addaction name="actionToggleRightPanel" />
+<addaction name="separator" />
+<addaction name="actionFullScreen" />
+<addaction name="actionResetLayout" />
 </widget>
 <widget class="QMenu" name="menuCalculation">
 <property name="title"><string>Calculation</string></property>
-<addaction name="actionCalcVSH"/>
-<addaction name="actionCalcPorosity"/>
-<addaction name="actionCalcSaturation"/>
-<addaction name="actionCalcPermeability"/>
-<addaction name="actionCalcNetPay"/>
-<addaction name="separator"/>
-<addaction name="actionCalcAll"/>
-<addaction name="actionClearResults"/>
+<addaction name="actionCalcVSH" />
+<addaction name="actionCalcPorosity" />
+<addaction name="actionCalcSaturation" />
+<addaction name="actionCalcPermeability" />
+<addaction name="actionCalcNetPay" />
+<addaction name="separator" />
+<addaction name="actionCalcAll" />
+<addaction name="actionClearResults" />
 </widget>
 <widget class="QMenu" name="menuInterpretation">
 <property name="title"><string>Interpretation</string></property>
-<addaction name="actionLithologyClass"/>
-<addaction name="actionFluidTyping"/>
-<addaction name="separator"/>
-<addaction name="actionCutoffManager"/>
-<addaction name="actionZoneManager"/>
-<addaction name="actionIntervalSummary"/>
+<addaction name="actionLithologyClass" />
+<addaction name="actionFluidTyping" />
+<addaction name="separator" />
+<addaction name="actionCutoffManager" />
+<addaction name="actionZoneManager" />
+<addaction name="actionIntervalSummary" />
 </widget>
 <widget class="QMenu" name="menuAdvInterp">
 <property name="title"><string>Advanced Interpretation</string></property>
-<addaction name="actionNMR"/>
-<addaction name="actionDipAnalysis"/>
-<addaction name="actionFaultDetection"/>
-<addaction name="actionSequenceStrat"/>
-<addaction name="actionPVT"/>
+<addaction name="actionNMR" />
+<addaction name="actionDipAnalysis" />
+<addaction name="actionFaultDetection" />
+<addaction name="actionSequenceStrat" />
+<addaction name="actionPVT" />
 </widget>
 <widget class="QMenu" name="menuImageAnalysis">
 <property name="title"><string>Image Analysis</string></property>
-<addaction name="actionFMIViewer"/>
-<addaction name="actionImageEnhance"/>
-<addaction name="actionFractureDetect"/>
-<addaction name="actionSedimentAnalysis"/>
+<addaction name="actionFMIViewer" />
+<addaction name="actionImageEnhance" />
+<addaction name="actionFractureDetect" />
+<addaction name="actionSedimentAnalysis" />
 </widget>
 <widget class="QMenu" name="menuGeomechanics">
 <property name="title"><string>Geomechanics</string></property>
-<addaction name="actionStressAnalysis"/>
-<addaction name="actionRockStrength"/>
-<addaction name="actionWellboreStat"/>
-<addaction name="actionMudWeight"/>
+<addaction name="actionStressAnalysis" />
+<addaction name="actionRockStrength" />
+<addaction name="actionWellboreStat" />
+<addaction name="actionMudWeight" />
 </widget>
 <widget class="QMenu" name="menuMultiWell">
 <property name="title"><string>Multi-Well</string></property>
-<addaction name="actionMultiWellPlot"/>
-<addaction name="actionCrossSection"/>
-<addaction name="actionWellStatComp"/>
-<addaction name="actionVolumetrics"/>
+<addaction name="actionMultiWellPlot" />
+<addaction name="actionCrossSection" />
+<addaction name="actionWellStatComp" />
+<addaction name="actionVolumetrics" />
 </widget>
 <widget class="QMenu" name="menuTools">
 <property name="title"><string>Tools</string></property>
-<addaction name="actionDepthConvert"/>
-<addaction name="actionCurveEditor"/>
-<addaction name="actionSpliceManager"/>
-<addaction name="actionFilterSmooth"/>
-<addaction name="actionEnvCorrect"/>
-<addaction name="separator"/>
-<addaction name="actionPythonConsole"/>
-<addaction name="actionScriptEditor"/>
-<addaction name="separator"/>
-<addaction name="actionPreferences"/>
+<addaction name="actionDepthConvert" />
+<addaction name="actionCurveEditor" />
+<addaction name="actionSpliceManager" />
+<addaction name="actionFilterSmooth" />
+<addaction name="actionEnvCorrect" />
+<addaction name="separator" />
+<addaction name="actionPythonConsole" />
+<addaction name="actionScriptEditor" />
+<addaction name="separator" />
+<addaction name="actionPreferences" />
 </widget>
 <widget class="QMenu" name="menuApps">
 <property name="title"><string>Apps</string></property>
-<addaction name="actionCarbonate"/>
-<addaction name="actionUnconventional"/>
-<addaction name="actionTightGas"/>
-<addaction name="actionCoalBed"/>
-<addaction name="separator"/>
-<addaction name="actionReservoirSim"/>
+<addaction name="actionCarbonate" />
+<addaction name="actionUnconventional" />
+<addaction name="actionTightGas" />
+<addaction name="actionCoalBed" />
+<addaction name="separator" />
+<addaction name="actionReservoirSim" />
 </widget>
 </widget>
 <widget class="QToolBar" name="mainToolBar">
 <property name="toolTip"><string>Main toolbar</string></property>
 <attribute name="toolBarArea"><enum>TopToolBarArea</enum></attribute>
 <attribute name="movable"><bool>false</bool></attribute>
-<addaction name="actionNewProject"/>
-<addaction name="actionOpenProject"/>
-<addaction name="actionSaveProject"/>
-<addaction name="separator"/>
-<addaction name="actionLoadLAS"/>
-<addaction name="actionAddWell"/>
-<addaction name="separator"/>
-<addaction name="actionCalcAll"/>
-<addaction name="separator"/>
-<addaction name="actionViewLogPlot"/>
-<addaction name="actionViewCrossPlot"/>
-<addaction name="actionViewHistogram"/>
-<addaction name="separator"/>
-<addaction name="actionPythonConsole"/>
+<addaction name="actionNewProject" />
+<addaction name="actionOpenProject" />
+<addaction name="actionSaveProject" />
+<addaction name="separator" />
+<addaction name="actionLoadLAS" />
+<addaction name="actionAddWell" />
+<addaction name="separator" />
+<addaction name="actionCalcAll" />
+<addaction name="separator" />
+<addaction name="actionViewLogPlot" />
+<addaction name="actionViewCrossPlot" />
+<addaction name="actionViewHistogram" />
+<addaction name="separator" />
+<addaction name="actionPythonConsole" />
 </widget>
-<widget class="QStatusBar" name="statusBar"/>
+<widget class="QStatusBar" name="statusBar" />
 </widget>
-<resources/>
-<connections/>
+<resources />
+<connections />
 </ui>
